@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button, Spinner, CardSection } from './components/common';
 import LoginForm from './components/LoginForm';
+import Config from './Config';
 
 class App extends Component{
   state = {
@@ -10,7 +11,7 @@ class App extends Component{
   }
   componentWillMount(){
    firebase.initializeApp({
-    apiKey: '',
+    apiKey: Config.MY_KEY,
     authDomain: 'authentication-ad860.firebaseapp.com',
     databaseURL: 'https://authentication-ad860.firebaseio.com',
     projectId: 'authentication-ad860',
